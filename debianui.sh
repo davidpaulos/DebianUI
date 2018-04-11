@@ -2,16 +2,29 @@
 
 function update
 {
+		#command to update de system
 		sudo apt-get upgrade
 }
 
 function install 
 {
+	#declaration of local variables 
 	local pkg
 	local argument_input	
+	
+	#selecting of packages to install
+	#flags multi to be able to pick multiple packages
+	#exact to match exact match
+	#no sort self explanatory
+	#cycle to enable cycle scroll
+	#reverse to set orientation to reverse
+	#margin for margins
+	#inline info to display info inline
+	#preview to show the package description 
+	#header and prompt to give info for people to know how to do stuff 
 	pkg="$( apt-cache search "" | sort -k1,1 -u | 
 		fzf -i \
-                    --multi \
+                    --multi \ 
                     --exact \
                     --no-sort \
                     --select-1 \
