@@ -24,7 +24,7 @@ function install
 	#header and prompt to give info for people to know how to do stuff 
 	pkg="$( apt-cache search "" | sort -k1,1 -u | 
 		fzf -i \
-                    --multi \ 
+                    --multi \
                     --exact \
                     --no-sort \
                     --select-1 \
